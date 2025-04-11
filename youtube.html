@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentLens AI - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+        .video-section {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        nav {
+            background: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+    </nav>
+    <div class="container">
+        <h2>About TalentLens AI</h2>
+        <p>Learn more about how AI is transforming resume analysis and career building. Click on the thumbnails to watch videos.</p>
+        
+        <!-- Section 1: How is Resume Important? -->
+        <div class="video-section"><h3>How is Resume Important?</h3>
+            <div class="video-container">
+                <img src="https://img.youtube.com/vi/TaV3YlVaBaM/0.jpg" onclick="loadVideo(this, 'TaV3YlVaBaM')">
+                <img src="https://img.youtube.com/vi/2ePf9rue1Ao/0.jpg" onclick="loadVideo(this, '2ePf9rue1Ao')">
+                <img src="https://img.youtube.com/vi/Kg98DMh6d0Y/0.jpg" onclick="loadVideo(this, 'Kg98DMh6d0Y')">
+                <img src="https://img.youtube.com/vi/MlJpL9wK1d4/0.jpg" onclick="loadVideo(this, 'MlJpL9wK1d4')">
+            </div>
+        </div>
+        
+        <!-- Section 2: Why Resume with AI? -->
+        <div class="video-section"><h3>Why Resume with AI?</h3>
+            <div class="video-container">
+                <img src="https://img.youtube.com/vi/xJcHoE_YncA/0.jpg" onclick="loadVideo(this, 'xJcHoE_YncA')">
+                <img src="https://img.youtube.com/vi/m8bxGZML3FQ/0.jpg" onclick="loadVideo(this, 'm8bxGZML3FQ')">
+                <img src="https://img.youtube.com/vi/NVRe4Bp7d4Y/0.jpg" onclick="loadVideo(this, 'NVRe4Bp7d4Y')">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" onclick="loadVideo(this, 'dQw4w9WgXcQ')">
+            </div>
+        </div>
+        
+        <!-- Section 3: What Skills are Required to Pass the Interview? -->
+        <div class="video-section"><h3>What Skills are Required to Pass the Interview?</h3>
+            <div class="video-container">
+                <img src="https://img.youtube.com/vi/abc123/0.jpg" onclick="loadVideo(this, 'abc123')">
+                <img src="https://img.youtube.com/vi/def456/0.jpg" onclick="loadVideo(this, 'def456')">
+                <img src="https://img.youtube.com/vi/ghi789/0.jpg" onclick="loadVideo(this, 'ghi789')">
+                <img src="https://img.youtube.com/vi/jkl012/0.jpg" onclick="loadVideo(this, 'jkl012')">
+            </div>
+        </div>
+        
+        <!-- Section 4: Interview Experience -->
+        <div class="video-section"><h3>Interview Experience</h3>
+            <div class="video-container">
+                <img src="https://img.youtube.com/vi/XYZ001/0.jpg" onclick="loadVideo(this, 'XYZ001')">
+                <img src="https://img.youtube.com/vi/XYZ002/0.jpg" onclick="loadVideo(this, 'XYZ002')">
+                <img src="https://img.youtube.com/vi/XYZ003/0.jpg" onclick="loadVideo(this, 'XYZ003')">
+                <img src="https://img.youtube.com/vi/XYZ004/0.jpg" onclick="loadVideo(this, 'XYZ004')">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadVideo(img, videoId) {
+            let iframe = document.createElement("iframe");
+            iframe.src = "https://www.youtube.com/embed/" + videoId;
+            iframe.allowFullscreen = true;
+            iframe.width = "100%";
+            iframe.height = "200px";
+            iframe.style.borderRadius = "8px";
+            img.parentNode.replaceChild(iframe, img);
+        }
+    </script>
+</body>
+</html>

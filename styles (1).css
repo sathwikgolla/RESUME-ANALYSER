@@ -1,0 +1,446 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light gray background */
+    color: #333;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://assets.onecompiler.app/43bythapb/43bytg442/resume-for-corporation-job-2021-08-26-15-44-47-utc-scaled.webp') no-repeat center center/cover; /* Background image */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #3498db;
+            color: white;
+        }
+
+        #hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            color: #c0392b;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .form-container button:hover {
+            background-color: #219150;
+        }
+
+/* Header and Navbar */
+header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient blue-purple */
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 0;
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Resume Upload Section */
+.upload-section, .templates-section, .login-section, .register-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Add a vibrant button style */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient blue */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb); /* Inverted gradient on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Input fields */
+input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    border: 2px solid #dfe2e6;
+    border-radius: 8px;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #2575fc; /* Focus effect */
+}
+
+/* Resume Templates Section */
+.template-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.template-card {
+    background-color: #fafafa;
+    padding: 30px;
+    width: 250px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.template-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.template-card h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.template-card button {
+    margin-top: 15px;
+    background-color: #2575fc;
+    border-radius: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.template-card button:hover {
+    background-color: #6a11cb;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .template-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .template-card {
+        width: 80%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+/* Login and Register Styles */
+.login-section, .register-section {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient blue-purple */
+    color: white;
+    padding: 60px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.login-section h2, .register-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    border: 2px solid #dfe2e6;
+    border-radius: 8px;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #2575fc; /* Blue color when focused */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #2575fc; /* Main blue */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #3498db;
+            color: white;
+        }
+
+        #hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .upload-section {
+            background-color: #ecf0f1;
+            padding: 50px 20px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #219150;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #c0392b;
+        }
+
+button:hover {
+    background: #6a11cb; /* Purple on hover */
+}
+
+button:focus {
+    outline: none;
+}

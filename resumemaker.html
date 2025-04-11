@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/6.0.2/docx.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #resume {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            text-align: left;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+        }
+        .resume-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .resume-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-right: 20px;
+        }
+        .resume-section {
+            margin-bottom: 20px;
+        }
+        .resume-section h3 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .resume-section p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Professional Resume Generator</h2>
+        <form id="resume-form">
+            <label>Profile Picture:</label>
+            <input type="file" id="profile-pic" accept="image/*">
+            
+            <label>Full Name:</label>
+            <input type="text" id="name" required>
+            
+            <label>Email:</label>
+            <input type="email" id="email" required>
+            
+            <label>Phone:</label>
+            <input type="text" id="phone" required>
+            
+            <label>Address:</label>
+            <input type="text" id="address" required>
+            
+            <label>Work Experience:</label>
+            <textarea id="experience" rows="4"></textarea>
+            
+            <label>Education:</label>
+            <textarea id="education" rows="4"></textarea>
+            
+            <label>Skills:</label>
+            <textarea id="skills" rows="3"></textarea>
+            
+            <label>Hobbies:</label>
+            <textarea id="hobbies" rows="3"></textarea>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+        
+        <div id="resume">
+            <div class="resume-header">
+                <img id="r-pic" src="" alt="Profile Picture">
+                <div>
+                    <h2 id="r-name"></h2>
+                    <p><strong>Email:</strong> <span id="r-email"></span></p>
+                    <p><strong>Phone:</strong> <span id="r-phone"></span></p>
+                    <p><strong>Address:</strong> <span id="r-address"></span></p>
+                </div>
+            </div>
+            
+            <div class="resume-section">
+                <h3>Work Experience</h3>
+                <p id="r-experience"></p>
+            </div>
+            
+            <div class="resume-section">
+                <h3>Education</h3>
+                <p id="r-education"></p>
+            </div>
+            
+            <div class="resume-section">
+                <h3>Skills</h3>
+                <p id="r-skills"></p>
+            </div>
+            
+            <div class="resume-section">
+                <h3>Hobbies</h3>
+                <p id="r-hobbies"></p>
+            </div>
+
+            <button onclick="downloadPDF()">Download as PDF</button>
+            <button onclick="downloadWord()">Download as DOCX</button>
+        </div>
+    </div>
+
+    <script>
+        function generateResume() {
+            let file = document.getElementById("profile-pic").files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("r-pic").src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+
+            document.getElementById("r-name").innerText = document.getElementById("name").value;
+            document.getElementById("r-email").innerText = document.getElementById("email").value;
+            document.getElementById("r-phone").innerText = document.getElementById("phone").value;
+            document.getElementById("r-address").innerText = document.getElementById("address").value;
+            document.getElementById("r-experience").innerText = document.getElementById("experience").value;
+            document.getElementById("r-education").innerText = document.getElementById("education").value;
+            document.getElementById("r-skills").innerText = document.getElementById("skills").value;
+            document.getElementById("r-hobbies").innerText = document.getElementById("hobbies").value;
+
+            document.getElementById("resume").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

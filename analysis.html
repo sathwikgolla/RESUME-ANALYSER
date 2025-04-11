@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff5733;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .suggestions {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #27ae60;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentLens AI - Resume Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff6600;
+            font-size: 28px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .suggestions {
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: slideUp 0.5s ease-in-out;
+        }
+
+        .suggestions h3 {
+            color: #007acc;
+        }
+
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .suggestions li {
+            padding: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TalentLens AI - Resume Analyzer</h1>
+    </header>
+
+    <section class="suggestions">
+        <h3>ATS-Friendly Resume Tips</h3>
+        <ul>
+            <li>Use a simple and clean format.</li>
+            <li>Include relevant keywords from the job description.</li>
+            <li>Avoid using images or graphics.</li>
+            <li>Use standard fonts like Arial or Times New Roman.</li>
+            <li>Save your resume as a .PDF or .DOCX format.</li>
+            <li>Use clear section headings (Work Experience, Education, Skills).</li>
+        </ul>
+    </section>
+
+    <a class="download-link" href="high-ats-score-resume.pdf" download>Download High ATS Score Resume</a>
+</body>
+</html>
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analysis</h1>
+        <p>Your ATS Score:</p>
+        <div class="score" id="atsScore">85%</div>
+        <div class="suggestions" id="suggestions">Make sure your resume includes more keywords relevant to your job field.</div>
+    </div>
+    <script>
+        // Ensuring consistent ATS Score
+        document.getElementById("atsScore").innerText = "85%";
+    </script>
+</body>
+</html>
